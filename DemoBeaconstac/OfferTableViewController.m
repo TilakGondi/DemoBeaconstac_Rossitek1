@@ -34,8 +34,10 @@
     NSArray *KFCOffers=[[NSArray alloc] initWithObjects:@"KFC Offer1",@"KFC Offer2",@"KFC Offer3",@"KFC Offer4", nil];
     
     if ([self.nearBeacon isEqualToString:@"TBeacon"]) {
+        self.title=@"Dominos";
         dataArry=[NSArray arrayWithArray:DominosOffers];
     }else if ([self.nearBeacon isEqualToString:@"Beacon2"]) {
+         self.title=@"KFC";
         dataArry=[NSArray arrayWithArray:KFCOffers];
     }
     [self.tableView reloadData];
